@@ -9,7 +9,7 @@
   "dependencies": {
     "shelljs": "^0.8.3"
   },
-  "scripts": {
+  "bin": {
     "dc": "bin/docker-compose.js",
     "dc:build": "bin/build.js",
     "dc:down": "bin/down.js",
@@ -19,7 +19,9 @@
     "dc:run": "bin/run.js",
     "dc:sync": "bin/docker-sync.js",
     "dc:up": "bin/up.js",
-    "dc:validate": "bin/validate.js",
+    "dc:validate": "bin/validate.js"
+  }
+  "scripts": {
     "test": "jest"
   }
 }
