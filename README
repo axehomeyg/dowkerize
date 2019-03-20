@@ -1,0 +1,9 @@
+# Docker/Microservice Wrappers
+
+## Instructions:
+* Environment env: (RAILS_ENV | NODE_ENV | RACK_ENV)
+* Environment values: (development, test, uat, staging, production)
+* Dockerfile/docker-compose.yml
+* ./docker/(development.yml, test, uat, staging, production)
+* ./docker/(sync.yml, non-sync.yml) (for Docker Sync usage)
+

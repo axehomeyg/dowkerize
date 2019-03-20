@@ -5,5 +5,21 @@
   "main": "index.js",
   "repository": "git@github.com:axehomeyg/dowkerize.git",
   "author": "Michael Cerna",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "shelljs": "^0.8.3"
+  },
+  "scripts": {
+    "dc": "bin/docker-compose.js",
+    "dc:build": "bin/build.js",
+    "dc:down": "bin/down.js",
+    "dc:purge-branches": "bin/maintenance/purge_branches.js",
+    "dc:purge-tags": "bin/maintenance/purge_tags.js",
+    "dc:restart": "bin/restart.js",
+    "dc:run": "bin/run.js",
+    "dc:sync": "bin/docker-sync.js",
+    "dc:up": "bin/up.js",
+    "dc:validate": "bin/validate.js",
+    "test": "jest"
+  }
 }
