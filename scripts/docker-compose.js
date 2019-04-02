@@ -39,7 +39,7 @@ const argsContainProject = () => process.argv.find(arg => arg.match(/-p/))
 
 const dockerProject = () => (
   (environmentModule.project() && !argsContainProject()) ?
-    `-f ${environmentModule.project()}` : "")
+    `-p ${environmentModule.project()}` : "")
 
 // Execute the given command with our docker-compose wrapper
 const dockerCompose = (cmd, envObj) => {
