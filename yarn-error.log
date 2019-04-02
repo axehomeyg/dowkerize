@@ -1,30 +1,35 @@
 Arguments: 
-  /home/cerna5150/.nvm/versions/node/v10.15.3/bin/node /usr/share/yarn/bin/yarn.js link
+  /usr/local/Cellar/node/11.10.0/bin/node /usr/local/bin/yarn publish
 
 PATH: 
-  /home/cerna5150/.nvm/versions/node/v10.15.3/bin:/home/cerna5150/.local/android/tools/bin:/home/cerna5150/.rvm/gems/ruby-2.6.0/bin:/home/cerna5150/.rvm/gems/ruby-2.6.0@global/bin:/home/cerna5150/.rvm/rubies/ruby-2.6.0/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin/:/home/cerna5150/.rvm/bin:./bin/host:/home/cerna5150/.local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/cerna5150/.local/android/tools:/home/cerna5150/.local/android/platform-tools:/home/cerna5150/.rvm/bin:/home/cerna5150/.rvm/bin
+  /Users/axehomeyg/.rvm/gems/ruby-2.4.1/bin:/Users/axehomeyg/.rvm/gems/ruby-2.4.1@global/bin:/Users/axehomeyg/.rvm/rubies/ruby-2.4.1/bin:/Users/axehomeyg/.local/android/tools/bin:/Library/Frameworks/Python.framework/Versions/3.7/bin:/Users/axehomeyg/.fastlane/bin:./bin/host:/Users/axehomeyg/.local/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/axehomeyg/.rvm/bin
 
 Yarn version: 
   1.13.0
 
 Node version: 
-  10.15.3
+  11.10.0
 
 Platform: 
-  linux x64
+  darwin x64
 
 Trace: 
-  SyntaxError: /home/cerna5150/Projects/dowkerize/package.json: Unexpected string in JSON at position 672
-      at JSON.parse (<anonymous>)
-      at /usr/share/yarn/lib/cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (/usr/share/yarn/lib/cli.js:304:30)
-      at /usr/share/yarn/lib/cli.js:315:13
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:125657:13)
+      at Interface.emit (events.js:197:13)
+      at Interface._ttyWrite (readline.js:799:16)
+      at ReadStream.onkeypress (readline.js:184:10)
+      at ReadStream.emit (events.js:197:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1071:36)
+      at ReadStream.emit (events.js:197:13)
+      at addChunk (_stream_readable.js:288:12)
 
 npm manifest: 
   {
     "name": "dowkerize",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "CI/CD Microservice Docker Helper",
     "main": "index.js",
     "repository": "git@github.com:axehomeyg/dowkerize.git",
@@ -34,17 +39,8 @@ npm manifest:
       "shelljs": "^0.8.3"
     },
     "bin": {
-      "dc": "bin/docker-compose.js",
-      "dc:build": "bin/build.js",
-      "dc:down": "bin/down.js",
-      "dc:purge-branches": "bin/maintenance/purge_branches.js",
-      "dc:purge-tags": "bin/maintenance/purge_tags.js",
-      "dc:restart": "bin/restart.js",
-      "dc:run": "bin/run.js",
-      "dc:sync": "bin/docker-sync.js",
-      "dc:up": "bin/up.js",
-      "dc:validate": "bin/validate.js"
-    }
+      "dc":                 "bin/dc.js"
+    },
     "scripts": {
       "test": "jest"
     }
