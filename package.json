@@ -10,9 +10,12 @@
     "shelljs": "^0.8.3"
   },
   "bin": {
-    "dc":                 "bin/dc.js"
+    "dc": "bin/dc.js"
   },
   "scripts": {
     "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^24.8.0"
   }
 }
