@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const shell = require("shelljs")
 
 const validCommands = [
@@ -35,5 +34,4 @@ const script = __dirname + "/../scripts/" + command + ".js"
 
 const fullCommand = script + ' ' + args.join(' ')
 
-return shell.exec(fullCommand)
-
+shell.exec(fullCommand)
